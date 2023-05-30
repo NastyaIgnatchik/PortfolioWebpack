@@ -17,6 +17,8 @@
   ],
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0,"maxBOF": 0 }]
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0,"maxBOF": 0 }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "sort-imports": "error"
   }
 }
