@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -19,10 +19,11 @@ module.exports = {
       template: "./public/index.html",
     }),
     new CleanWebpackPlugin(),
-    process.env.NODE_ENV === "production" ? "" : new ESLintPlugin({
-      extensions:['.tsx','.ts']
-    }),
-
+    process.env.NODE_ENV === "production"
+      ? ""
+      : new ESLintPlugin({
+          extensions: [".tsx", ".ts"],
+        }),
   ],
   module: {
     rules: [
@@ -66,5 +67,4 @@ module.exports = {
     compress: true,
     port: 3000,
   },
-
 };
