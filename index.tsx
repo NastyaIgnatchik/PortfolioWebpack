@@ -1,7 +1,9 @@
+import "./style/globalStyle.less";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import App from "./App";
-import "./style/globalStyle.less";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

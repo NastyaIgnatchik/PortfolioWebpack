@@ -15,8 +15,12 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint","simple-import-sort"],
   "rules": {
-    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0,"maxBOF": 0 }]
-  }
-}
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0,"maxBOF": 0 }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+
+  }}
+
