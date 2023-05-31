@@ -1,32 +1,166 @@
-<img src="./assets/images/ME.png" width=200  align="right" alt="me">
+## Getting Started
 
-<h1 style="color: aquamarine">My portfolio</h1>
+### Start on Windows
 
-_This is a project about me and my web development skills. It contains my CV and examples of work._
-***
-<h4 style="color: aquamarine">I write my project with</h4>
-- React  
-- Less 
+- Run commands:
 
+```bash
+npm run dev
 
-<h4 style="color: aquamarine">Best practice</h4>
+npm run build
+```
 
-1) ````$ onClick={() => fucntion()})````
+## Stack
 
+- React
+- LESS (using .module.less)
 
+### Sctructure of project
 
-2) We use buttons for everything clickable.
+```bash
 
-***
+└── /public - main html page
+└── /src
+    ├── /assets - images/fonts
+    └── /components - page components
+└── /app - skeleton pages
+└── /index - assembly entry point
+└── /styles - global CSS
 
-## ___You can see more about me___ -  [tap to redirect](https://portfolio-dzzw.vercel.app/)
+```
 
+### Sctructure of components
 
+```bash
+.
+└── /src
+    └── /components
+        └── /component directory
+                ├── [ComponentName].tsx
+                └── componentStyles
+```
 
+# Naming
 
+​For component folders use camelCase (`nameComponent`)
+and PascalCase for components:
 
+```bash
+const ComponentName = () => {}
+```
 
+​For style folders and className use camelCase:
 
+```bash
+className = 'redButton'
+```
 
+Always use camelCase for variables:
 
+```bash
+let counterOfNumbers = 0;
+```
 
+# Code styling
+
+### Don't pass event object to a function
+
+It makes the code more readable and shorter.
+
+#### Bad
+
+```bash
+onClick=({(e) =>handler(e)})
+```
+
+#### Good
+
+```bash
+ onClick=({() => fucntion()})
+```
+
+### Import in Order
+
+The rule of thumb is to keep the import order like this:
+
+- styles
+- Packages
+- Absolute imports and other imports
+- Relative imports
+- exports
+
+#### Bad
+
+```bash
+import React from "react";
+import Button from "../Button";
+
+import styles from "./styles.css";
+import type { User } from "../../types";
+import { getUser } from "../../api";
+
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import { truncate, formatNumber } from "../../utils";
+```
+
+#### Good
+
+```bash
+import classnames from "classnames";
+import PropTypes from "prop-types";
+import React from "react";
+
+import { getUser } from "../../api";
+import type { User } from "../../types";
+import { formatNumber, truncate } from "../../utils";
+import Button from "../Button";
+import styles from "./styles.css";
+```
+
+### Quotes
+
+#### Bad
+
+```bash
+<Foo bar='bar' />
+
+```
+
+#### Good
+
+```bash
+<Foo bar="bar" />
+
+```
+
+### Self-Closing Tags
+
+#### Bad
+
+```bash
+<SomeComponent variant="stuff"></SomeComponent>
+```
+
+#### Good
+
+```bash
+<SomeComponent variant="stuff" />
+
+```
+
+### Use only buttons as buttons
+
+Don't use non-clickable components (div,span) for buttons:
+
+#### Bad
+
+```bash
+<div onClick(()={clickHandler})>button</div>
+```
+
+#### Good
+
+```bash
+<button onClick(()={clickHandler})>button</buttton>
+```
