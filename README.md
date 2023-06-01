@@ -12,8 +12,10 @@ npm run build
 
 ## Stack
 
-- React
-- LESS (using .module.less)
+- React 18.2.0
+- LESS (using.module.less)
+- Typescript 
+- Webpack
 
 ### Sctructure of project
 
@@ -37,7 +39,7 @@ npm run build
     └── /components
         └── /component directory
                 ├── [ComponentName].tsx
-                └── componentStyles
+                └── componentStyles.module.less
 ```
 
 # Naming
@@ -76,18 +78,19 @@ onClick=({(e) =>handler(e)})
 #### Good
 
 ```bash
- onClick=({() => fucntion()})
+onClick=({function()})
 ```
 
 ### Import in Order
 
 The rule of thumb is to keep the import order like this:
 
-- styles
+- Side effect imports (for example styles )
+- Modules prefixed with node
 - Packages
 - Absolute imports and other imports
 - Relative imports
-- exports
+- exports (exports with from)
 
 #### Bad
 
@@ -100,14 +103,14 @@ import type { User } from "../../types";
 import { getUser } from "../../api";
 
 import PropTypes from "prop-types";
-import classnames from "classnames";
+import classnames from "classes";
 import { truncate, formatNumber } from "../../utils";
 ```
 
 #### Good
 
 ```bash
-import classnames from "classnames";
+import classnames from "classes";
 import PropTypes from "prop-types";
 import React from "react";
 
