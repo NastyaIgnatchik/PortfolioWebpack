@@ -24,7 +24,10 @@ npm run build
 └── /public - main html page
 └── /src
     ├── /assets - images/fonts
-    └── /components - page components
+    ├── /components - page components
+    ├── /pages 
+    ├── /layouts - pages routing
+    └── /types - declare modules
 └── /app - skeleton pages
 └── /index - assembly entry point
 └── /styles - global CSS
@@ -36,10 +39,10 @@ npm run build
 ```bash
 .
 └── /src
-    └── /components
-        └── /component directory
-                ├── [ComponentName].tsx
-                └── componentStyles.module.less
+    └── /pages
+        └── /page directory
+                ├── [PageName].tsx
+                └── pageStyles.module.less
 ```
 
 # Naming
