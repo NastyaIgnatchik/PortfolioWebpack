@@ -1,4 +1,4 @@
-import "./style/globalStyle.less";
+import "./style/globalStyle.module.less";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
