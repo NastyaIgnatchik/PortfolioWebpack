@@ -1,0 +1,52 @@
+@import "../../style/globalVariables.module";
+
+.mainContainer {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  background-image: url("../assets/images/bg-image.png");
+}
+
+.active {
+  color: white;
+}
+
+header {
+  background: @color-primary;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 10px 30px;
+  font-size: 18px;
+  margin-bottom: 5%;
+  a {
+    color: @color-bg;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 10px 3%;
+    &:hover {
+      border-color: @color-bg;
+    }
+  }
+}
+main {
+  display: flex;
+  align-items: stretch;
+}
+.menu {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  display: none;
+}
+
+@media (max-width: 640px) {
+  header {
+    a {
+      display: none;
+    }
+    .menu {
+      display: flex;
+    }
+  }
+}

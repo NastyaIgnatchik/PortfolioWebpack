@@ -1,0 +1,62 @@
+@import "../../../style/globalVariables.module.less";
+@import "../../../style/globalStyle.module.less";
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+}
+
+.photoContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .imageBackground{
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        background: @color-primary;
+        width: 70%;
+    }
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+}
+h5 {
+  color: @color-light;
+}
+
+img {
+  width: 100%;
+}
+
+.titles {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .imageBackground {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+  .imageBackground {
+    width: 75%;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  h1,
+  h5 {
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
+  }
+}

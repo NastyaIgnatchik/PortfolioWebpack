@@ -1,0 +1,27 @@
+@import "../../../style/globalVariables.module.less";
+
+.headerSocials {
+  position: absolute;
+  left: -60px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 10px;
+  &:after {
+    text-align: center;
+    color: @color-primary;
+    content: "|";
+    font-size: 30px;
+  }
+}
+.icons {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 768px) {
+  .headerSocials {
+    display: none;
+  }
+}
