@@ -1,4 +1,4 @@
-@import "../../../style/globalVariables.module.less";
+@import "../../../style/globalVariables.less";
 
 .container {
   .containerPage;
@@ -16,6 +16,11 @@
   grid-template-columns: 40% 50%;
   column-gap: 3%;
   row-gap: 20px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 .articlesAndText {
   display: flex;
@@ -23,6 +28,9 @@
   flex-wrap: wrap;
   align-content: start;
   gap: 10px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 .article {
   background: @color-primary;
@@ -41,6 +49,10 @@
     transition: all;
     transition-duration: 200ms;
   }
+  @media (max-width: 640px) {
+    width: 90%;
+    aspect-ratio: unset;
+  }
 }
 .aboutIcons {
   color: @color-bg;
@@ -53,6 +65,9 @@
   border-radius: 30px;
   place-items: center;
   background: linear-gradient(45deg, transparent, @color-primary, transparent);
+  @media (max-width: 640px) {
+    width: 80%;
+  }
 }
 .aboutImage {
   border-radius: 30px;
@@ -75,22 +90,4 @@
   .btn-primary;
 }
 
-@media (max-width: 768px) {
-  .containerForPhotoArticlesText {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-  }
-  .articlesAndText {
-    justify-content: center;
-  }
-}
-@media (max-width: 640px) {
-  .photoBackground {
-    width: 80%;
-  }
-  .article {
-    width: 90%;
-    aspect-ratio: unset;
-  }
-}
+
