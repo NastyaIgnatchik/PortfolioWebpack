@@ -1,11 +1,7 @@
 @import "../../../style/globalVariables.module.less";
 
 .container {
-  margin: 0 auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .containerPage;
   .pageName {
     color: @color-primary;
     margin: 15px 0 25px 0;
@@ -15,7 +11,7 @@
   }
 }
 
-.container2 {
+.containerForPhotoArticlesText {
   display: grid;
   grid-template-columns: 40% 50%;
   column-gap: 3%;
@@ -28,7 +24,7 @@
   align-content: start;
   gap: 10px;
 }
-article {
+.article {
   background: @color-primary;
   border-radius: 30px;
   border: 2px solid transparent;
@@ -80,7 +76,7 @@ article {
 }
 
 @media (max-width: 768px) {
-  .container2 {
+  .containerForPhotoArticlesText {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -93,7 +89,7 @@ article {
   .photoBackground {
     width: 80%;
   }
-  article {
+  .article {
     width: 90%;
     aspect-ratio: unset;
   }

@@ -12,23 +12,23 @@ const About = () => {
     <div className={style.container}>
       <h5>Get to know</h5>
       <h2 className={style.pageName}>About Me</h2>
-      <div className={style.container2}>
+      <div className={style.containerForPhotoArticlesText}>
         <div className={style.photoBackground}>
           <img src={about} className={style.aboutImage} alt='about'/>
         </div>
 
         <div className={style.articlesAndText}>
-          <article>
+          <article className={style.article}>
             <RiAwardLine className={style.aboutIcons} />
             <h2>Experience</h2>
             <small>No Experience</small>
           </article>
-          <article>
+          <article className={style.article}>
             <FiUsers className={style.aboutIcons} />
             <h2>Clients</h2>
             <small>No Clients</small>
           </article>
-          <article>
+          <article className={style.article}>
             <AiOutlineFolderOpen className={style.aboutIcons} />
             <h2>Projects</h2>
             <small>No Projects</small>
