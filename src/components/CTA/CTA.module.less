@@ -1,4 +1,4 @@
-@import "../../../style/globalVariables.module.less";
+@import "../../../style/globalVariables.less";
 
 .downloadCVButton {
   .btn;
@@ -10,12 +10,10 @@
 }
 .CTAContainer {
   display: flex;
-}
-
-@media (max-width: 640px) {
-  .CTAContainer {
+  @media (max-width: 640px){
     flex-direction: row;
     justify-content: center;
     margin-bottom: 10%;
   }
 }
+

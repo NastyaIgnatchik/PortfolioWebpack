@@ -1,4 +1,4 @@
-@import "../../../style/globalVariables.module.less";
+@import "../../../style/globalVariables.less";
 
 .headerSocials {
   position: absolute;
@@ -14,14 +14,12 @@
     content: "|";
     font-size: 30px;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .icons {
   color: white;
   width: 20px;
   height: 20px;
-}
-@media (max-width: 768px) {
-  .headerSocials {
-    display: none;
-  }
 }

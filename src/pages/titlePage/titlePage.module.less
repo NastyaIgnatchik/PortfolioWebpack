@@ -1,5 +1,4 @@
-@import "../../../style/globalVariables.module.less";
-@import "../../../style/globalStyle.module.less";
+@import "../../../style/globalVariables.less";
 
 .container {
   margin: 0 auto;
@@ -8,27 +7,46 @@
   width: 80%;
   align-items: center;
   justify-items: center;
-  height: 100%;
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
 }
 
 .photoContainer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    .imageBackground{
-        border-top-left-radius: 100%;
-        border-top-right-radius: 100%;
-        background: @color-primary;
-        width: 70%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .imageBackground {
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    background: @color-primary;
+    width: 70%;
+    @media (max-width: 768px) {
+      width: 80%;
     }
+    @media (max-width: 640px) {
+      width: 75%;
+    }
+  }
 }
 
 h1 {
   font-size: 40px;
   color: white;
+  @media (max-width: 640px) {
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
+  }
 }
 h5 {
   color: @color-light;
+  @media (max-width: 640px) {
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
+  }
 }
 
 img {
@@ -37,26 +55,4 @@ img {
 
 .titles {
   position: relative;
-}
-
-@media (max-width: 768px) {
-  .imageBackground {
-    width: 80%;
-  }
-}
-
-@media (max-width: 640px) {
-  .imageBackground {
-    width: 75%;
-  }
-  .container {
-    grid-template-columns: 1fr;
-    width: 90%;
-  }
-  h1,
-  h5 {
-    text-align: center;
-    margin: 0;
-    line-height: 50px;
-  }
 }
