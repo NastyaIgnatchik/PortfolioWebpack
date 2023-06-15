@@ -5,7 +5,7 @@ import { experienceFrontend } from "../../../data/experienseData";
 import { experienceBackend } from "../../../data/experienseData";
 import style from "./skillsStyle.module.less";
 
-const Experience = () => {
+const Skills = () => {
   interface IExperience {
     id: number;
     skill: string;
@@ -56,4 +56,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;
