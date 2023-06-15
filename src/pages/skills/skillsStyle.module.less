@@ -1,0 +1,58 @@
+@import "../../../style/globalVariables.less";
+
+.experienceCard {
+  background: @color-primary;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  &:hover {
+    background: transparent;
+    border-color: @color-primary-variant;
+    cursor: default;
+    transition-duration: 200ms;
+  }
+}
+.skillsTitle {
+  text-align: center;
+  color: @color-bg;
+  margin-bottom: 10px;
+}
+.skillsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.article {
+  display: flex;
+  gap: 5px;
+}
+.icons {
+  margin-top: 25px;
+}
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  justify-content: center;
+  align-content: start;
+  width: 75%;
+  row-gap: 20px;
+  column-gap: 40px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.container {
+  .containerPage;
+  h5 {
+    color: @color-light;
+    margin: 0;
+  }
+  h2 {
+    color: @color-primary;
+    margin: 20px 0;
+  }
+}
