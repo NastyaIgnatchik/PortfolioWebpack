@@ -5,12 +5,14 @@ import { experienceFrontend } from "../../../data/experienseData";
 import { experienceBackend } from "../../../data/experienseData";
 import style from "./skillsStyle.module.less";
 
+interface IExperience {
+  id: number;
+  skill: string;
+  degree: string;
+}
+
 const Skills = () => {
-  interface IExperience {
-    id: number;
-    skill: string;
-    degree: string;
-  }
+
   return (
     <div className={style.container}>
       <h5>That Skills I Have</h5>
