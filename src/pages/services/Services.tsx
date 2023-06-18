@@ -7,21 +7,21 @@ interface IServices {
   service: string;
 }
 
+const arrayForCount = [1, 2, 3, 4, 5, 6];
+
+const services = [
+  {
+    service: "UI/UX Design",
+  },
+  {
+    service: "Web Development",
+  },
+  {
+    service: "Content Creation",
+  },
+];
+
 const Services = () => {
-  const arrayForCount = [1, 2, 3, 4, 5, 6];
-
-  const services = [
-    {
-      service: "UI/UX Design",
-    },
-    {
-      service: "Web Development",
-    },
-    {
-      service: "Content Creation",
-    },
-  ];
-
   return (
     <div className={style.container}>
       <h5>What I Offer</h5>
