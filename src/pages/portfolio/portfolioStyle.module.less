@@ -1,0 +1,70 @@
+@import "../../../style/globalVariables.less";
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: @color-primary;
+  padding: 3%;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition-duration: 200ms;
+  &:hover {
+    border-color: @color-primary-variant;
+    background: transparent;
+  }
+}
+.container {
+  .containerPage;
+  text-align: center;
+  h5 {
+    color: @color-light;
+    margin: 0;
+  }
+  h2 {
+    color: @color-primary;
+    margin: 20px 0;
+  }
+}
+.containerForArticle {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    width: 90%;
+  }
+  width: 80%;
+  row-gap: 20px;
+  column-gap: 30px;
+  justify-content: center;
+}
+.img {
+  border-radius: 20px;
+  object-fit: cover;
+}
+.portfolioInfo {
+  align-self: flex-start;
+  h3 {
+    text-align: start;
+    margin: 7% auto;
+  }
+  .portfolioInfoButton {
+    margin-top: 5px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
+.button {
+  .btn;
+  color: @color-bg;
+  border-color: @color-bg;
+  &:hover {
+    color: @color-primary;
+    border-color: @color-primary;
+    background: transparent;
+  }
+}
+.disabledButton {
+  .button;
+  pointer-events: none;
+}
